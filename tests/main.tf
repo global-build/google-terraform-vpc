@@ -9,8 +9,8 @@ locals {
 module "vpc" {
   source = "../"
 
-  project_id   = "ops-trisha-fernandes"
-  network_name = "test"
+  project_id   = var.project_id
+  network_name = var.network_name
   subnets = [
     {
       subnet_name   = "${local.subnet_01}"

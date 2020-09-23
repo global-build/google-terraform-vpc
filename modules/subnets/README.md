@@ -12,7 +12,7 @@ Basic usage of this submodule is as follows:
 
 ```hcl
 module "vpc" {
-    source  = "terraform-google-modules/network/google//modules/subnets"
+    source  = "git@github.com:global-build/terraform-google-vpc/modules/subnets/?ref=master"
     version = "~> 2.0.0"
 
     project_id   = "<PROJECT ID>"

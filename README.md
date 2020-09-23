@@ -10,17 +10,12 @@ It supports creating:
 
 Sub modules are provided for creating individual vpc, subnets, and routes. See the modules directory for the various sub modules usage.
 
-## Compatibility
-
-This module is meant for use with Terraform 0.12. If you haven't [upgraded](https://www.terraform.io/upgrade-guides/0-12.html) and need a Terraform 0.11.x-compatible version of this module, the last released version intended for Terraform 0.11.x is [0.8.0](https://registry.terraform.io/modules/terraform-google-modules/network/google/0.8.0).
-
 ## Usage
 You can go to the tests folder, however the usage of the module could be like this in your own main.tf file:
 
 ```hcl
 module "vpc" {
-    source  = "terraform-google-modules/network/google"
-    version = "~> 2.5"
+    source  = "git@github.com:global-build/terraform-google-vpc/?ref=master"
 
     project_id   = "<PROJECT ID>"
     network_name = "example-vpc"
@@ -154,10 +149,9 @@ The routes list contains maps, where each object represents a route. For the nex
 
 ## Requirements
 ### Installed Software
-- [Terraform](https://www.terraform.io/downloads.html) ~> 0.12.6
-- [Terraform Provider for GCP](https://github.com/terraform-providers/terraform-provider-google) ~> 2.19
-- [Terraform Provider for GCP Beta](https://github.com/terraform-providers/terraform-provider-google-beta) ~>
-  2.19
+- [Terraform](https://www.terraform.io/downloads.html) 
+- [Terraform Provider for GCP](https://github.com/terraform-providers/terraform-provider-google)
+- [Terraform Provider for GCP Beta](https://github.com/terraform-providers/terraform-provider-google-beta)
 - [gcloud](https://cloud.google.com/sdk/gcloud/) >243.0.0
 
 ### Configure a Service Account
