@@ -7,25 +7,25 @@ variable "network_name" {
 }
 
 variable "description" {
-  type = string
+  type        = string
   description = "An optional description of this resource. The resource must be recreated to modify this field."
   default     = ""
 }
 
 variable "auto_create_subnetworks" {
-  type = bool
+  type        = bool
   description = "When set to true, the network is created in 'auto subnet mode' and it will create a subnet for each region automatically across the 10.128.0.0/9 address range. When set to false, the network is created in 'custom subnet mode' so the user can explicitly connect subnetwork resources."
-  default = false
+  default     = false
 }
 
 variable "routing_mode" {
-  type = string
-  description ="The network-wide routing mode to use. If set to REGIONAL, this network's cloud routers will only advertise routes with subnetworks of this network in the same region as the router. If set to GLOBAL, this network's cloud routers will advertise routes with all subnetworks of this network, across regions. Possible values are REGIONAL and GLOBAL."
-  default = "GLOBAL"
+  type        = string
+  description = "The network-wide routing mode to use. If set to REGIONAL, this network's cloud routers will only advertise routes with subnetworks of this network in the same region as the router. If set to GLOBAL, this network's cloud routers will advertise routes with all subnetworks of this network, across regions. Possible values are REGIONAL and GLOBAL."
+  default     = "GLOBAL"
 }
 
 variable "delete_default_routes_on_create" {
-  type = bool
+  type        = bool
   description = "If set to true, default routes (0.0.0.0/0) will be deleted immediately after network creation. Defaults to false."
-  default = false
+  default     = false
 }

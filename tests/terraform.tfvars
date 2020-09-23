@@ -1,2 +1,2 @@
-project_id = "ops-trisha-fernandes"
 network_name = "test"
+region = "europe-west2"
