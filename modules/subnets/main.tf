@@ -10,7 +10,7 @@ resource "google_compute_subnetwork" "subnetwork" {
   name                     = each.value.subnet_name
   ip_cidr_range            = each.value.subnet_ip
   region                   = each.value.subnet_region
-  private_ip_google_access = lookup(each.value, "subnet_private_access", "false")
+  private_ip_google_access = lookup(each.value, "subnet_private_access", "true")
   dynamic "log_config" {
     for_each = lookup(each.value, "subnet_flow_logs", false) ? [{
       aggregation_interval = lookup(each.value, "subnet_flow_logs_interval", "INTERVAL_5_SEC")
