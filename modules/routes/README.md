@@ -13,7 +13,7 @@ Basic usage of this submodule is as follows:
 
 ```hcl
 module "vpc" {
-    source  = "git@github.com:global-build/terraform-google-vpc/modules/routes/?ref=master"
+    source  = "git@github.com:global-build/terraform-google-vpc/modules/routes/?ref=v0.13.1"
 
     project_id   = "<PROJECT ID>"
     network_name = "example-vpc"
