@@ -15,7 +15,7 @@ You can go to the tests folder, however the usage of the module could be like th
 
 ```hcl
 module "vpc" {
-    source  = "git@github.com:global-build/terraform-google-vpc/?ref=master"
+    source  = "git@github.com:global-build/terraform-google-vpc//?ref=v0.13.1"
 
     project_id   = "<PROJECT ID>"
     network_name = "example-vpc"
